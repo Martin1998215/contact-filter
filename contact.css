@@ -8,6 +8,7 @@ body {
     flex-wrap: wrap;
     width: 100%;
     flex-direction: column;
+    background: lightcyan;
 }
 .head {
     display: flex;
@@ -20,33 +21,69 @@ body {
     background: gray;
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 .title {
     color: blue;
     padding: 5px;
 }
+.entry-section {
+    display: none;
+    flex-wrap: wrap;
+flex-direction: column;
+    width: 90%;
+    margin: 100px 5%;
+    background: white;
+    box-shadow: 2px 2px 6px gray;
+    position: fixed;
+}
+label, .enter, .save-btn {
+    padding: 5px 10px;
+    margin: 5px 10px;
+}
+.save-btn {
+    background: black;
+    color: white;
+}
 .screen {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 100%;
     
+}
+.add-contacts {
+    
+    font-size: 13px;
+    padding: 5px 10px;
+    margin: 5px;
+    color: #26dcff;
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+}
+.new {
+    text-align: center;
+    width: 100%;
+    padding: 5px;
 }
 #screen {
     margin-right: 10px;
     border: none;
     border-bottom: 1px solid black;
-    font-size: 16px;
+    font-size: 13px;
     padding: 5px;
     color: black;
     background: lightgray;
-    margin-bottom: 5px;
-    width: 50%;
+    margin: 5px;
+    width: 40%;
   
 }
 ul {
     list-style-type: none;
     width: 100%;
+    background: white;
+    position: relative;
 }
 ul li {
     padding: 5px 10px;
@@ -58,4 +95,38 @@ h4 {
     width: 100%;
     background: lightgray;
     padding: 3px 10px;
+}
+
+
+@media only screen and (min-width: 600px){
+    body {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .entry-section {
+        width: 70%;
+        margin: 100px 15%;
+    }
+}
+
+@media only screen and (min-width: 776px){
+    body {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .entry-section {
+        width: 80%;
+        margin: 100px 10%;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    body {
+        width: 40%;
+        margin: 0 auto;
+    }
+    .entry-section {
+        width: 80%;
+        margin: 100px 10%;
+    }
 }
